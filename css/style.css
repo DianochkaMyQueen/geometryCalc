@@ -1,0 +1,54 @@
+body, h1, h2, p, div, section, span, input, label, select, option, ul, li {
+  margin: 1px;
+  padding: 0px;
+  border: 0;
+  box-sizing: border-box;
+}
+
+li {list-style-type: none}
+
+.flex {display: flex}
+
+.flex-column {flex-flow: column nowrap}
+
+body {
+  background-image: linear-gradient(75deg, #0066ff, #00FFCD);
+  padding: 15px;
+  font: 16px "Lato";
+  color: #fff;
+}
+
+.header_title {
+  flex-wrap: wrap;
+  font-size: calc(25px)
+}
+
+.option-box {
+  position: absolute;
+  top: 30px;
+}
+
+.header_select {
+  margin: 0px 10px;
+  background: none;
+  color: inherit;
+  font: inherit; 
+  appearance: none;
+  position: relative;
+}
+
+.option {
+  margin: 5px;
+  opacity: 0;
+}
+
+.option-active {
+  display: inline;
+  animation: visible_option 1s linear 1 forwards;
+}
+
+@keyframe visible_option {
+  0% {opacity: 0}
+  
+  100% {opacity: 1;}
+}

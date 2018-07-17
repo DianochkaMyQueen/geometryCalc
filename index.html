@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>async input changes (test)</title>
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  
+      <style>
+      /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
+      body, h1, h2, p, div, section, span, input, label, select, option, ul, li {
+  margin: 1px;
+  padding: 0px;
+  border: 0;
+  box-sizing: border-box;
+}
+
+li {list-style-type: none}
+
+.flex {display: flex}
+
+.flex-column {flex-flow: column nowrap}
+
+body {
+  background-image: linear-gradient(75deg, #0066ff, #00FFCD);
+  padding: 15px;
+  font: 16px "Lato";
+  color: #fff;
+}
+
+.header_title {
+  flex-wrap: wrap;
+  font-size: calc(25px)
+}
+
+.option-box {
+  position: absolute;
+  top: 30px;
+}
+
+.header_select {
+  margin: 0px 10px;
+  background: none;
+  color: inherit;
+  font: inherit; 
+  appearance: none;
+  position: relative;
+}
+
+.option {
+  margin: 5px;
+  opacity: 0;
+}
+
+.option-active {
+  display: inline;
+  animation: visible_option 1s linear 1 forwards;
+}
+
+@keyframe visible_option {
+  0% {opacity: 0}
+  
+  100% {opacity: 1;}
+}
+    </style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+</head>
+
+<body>
+
+  <header class="header flex">
+  <h1 class="header_title flex">
+    How to calculate
+    <span class="flex">
+      <ul name="" class="header_select select-equation flex">
+        <li class="placeholder">?</li>
+        <section class="option-box flex flex-column">
+          <li class="option">option</li>
+          <li class="option">option</li>
+        </section>
+      </ul>
+      of
+      <ul name="" class="header_select select-shape flex">
+        <li class="placeholder">?</li>
+        <section class="option-box flex flex-column">
+          <li class="option option-active">option</li>
+          <li class="option">option</li>
+        </section>
+      </ul>  
+    </span>
+  </h1>
+</header>
+  
+  
+
+</body>
+
+</html>
